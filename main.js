@@ -1,19 +1,16 @@
-const submit = document.getElementById("submit-Valor");
+const = documento.getElementById("meuFormulario")
 
-function validaNumero(numeroMenor) {
-    const numeroMax = numeroMenor.split('<=10')
-    return numeroMax.min <=10;
+form.addEventListener('submit', function(e) {
+e.preventDefault();  
+
+const campoA = parseInt(document.getElementById('campoA').value);  
+const campoB = parseInt(document.getElementById('campoB').value); 
+
+if (campoB > campoA) {  
+alert('Formulário válido! B é maior que A.');   
+} else {  
+alert('Formulário inválido! B deve ser maior que A.');  
 }
-
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-
-
-    const valorA = document.getElementById("valor-a");
-    if (!isNaN(!valorA.value)) {
-        alert('Por favor, insira um número válido.');
-    }
-})
-console.log(submit);
-
+});
+console.log(form);
 
