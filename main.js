@@ -1,16 +1,21 @@
-const = documento.getElementById("meuFormulario")
+const form = document.getElementById('meuFormulario');
 
-form.addEventListener('submit', function(e) {
-e.preventDefault();  
-
-const campoA = parseInt(document.getElementById('campoA').value);  
-const campoB = parseInt(document.getElementById('campoB').value); 
-
-if (campoB > campoA) {  
-alert('Formulário válido! B é maior que A.');   
-} else {  
-alert('Formulário inválido! B deve ser maior que A.');  
+function validaCampo (campoMaior){
+    const numeroComoArray = campoB.value > CampoC.value
+    return numeroComoArray.value 
 }
-});
-console.log(form);
 
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const campoB = parseInt (document.getElementById('campoB').value);
+    const CampoC = parseInt (document.getElementById('CampoC').value);
+
+    if (!validaCampo(campoB.value > CampoC.value)){
+        alert("Campo B não pode ser menor que Campo C ");
+    }else{
+        alert("Continuar");
+    }
+});
+
+console.log(form);
